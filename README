@@ -1,0 +1,4 @@
+Usage example:
+
+docker run --rm -it -v /home/wiktor/CNV-opt-reference-sample-set-selector:/home/wiktor/CNV-opt-reference-sample-set-selector -w /home/wiktor/CNV-opt-reference-sample-set-selector wkusmirek/cnv-opt-reference-sample-set-selector Rscript -e "library('REFERENCE.SAMPLE.SET.SELECTOR');run_REFERENCE.SAMPLE.SET.SELECTOR(3,'/home/wiktor/CNV-opt-reference-sample-set-selector/22_cov_NA.csv')"
+
