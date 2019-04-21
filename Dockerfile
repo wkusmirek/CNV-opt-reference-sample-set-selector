@@ -1,7 +1,5 @@
 FROM biodatageeks/cnv-opt-codex
-MAINTAINER biodatageeks <team@biodatageeks.ii.pw.edu.pl>
-
-ARG CACHE_DATE=not_a_specified_date
+MAINTAINER kusmirekwiktor@gmail.com
 
 RUN Rscript -e "install.packages('ExomeDepth', repos = 'http://cran.us.r-project.org')"
 
@@ -9,4 +7,6 @@ RUN Rscript -e "install.packages('ggplot2', repos = 'http://cran.us.r-project.or
 
 RUN Rscript -e "install.packages('clusterCrit', repos = 'http://cran.us.r-project.org')"
 
-RUN Rscript -e "install.packages('REFERENCE.SAMPLE.SET.SELECTOR', repos = NULL, type='source')"
+RUN Rscript -e "install.packages('devtools', repos = 'http://cran.us.r-project.org')"
+
+RUN Rscript -e "library(devtools);install_github('wkusmirek/CNV-opt-reference-sample-set-selector/REFERENCE.SAMPLE.SET.SELECTOR', build_vignettes = FALSE)"
